@@ -1,9 +1,9 @@
 import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import com.android.build.gradle.LibraryExtension
-import ir.vahid.framework.configureFlavors
-import ir.vahid.framework.configureKotlinAndroid
-import ir.vahid.framework.disableUnnecessaryAndroidTests
-import ir.vahid.framework.libs
+import ir.vahid.trader.configureFlavors
+import ir.vahid.trader.configureKotlinAndroid
+import ir.vahid.trader.disableUnnecessaryAndroidTests
+import ir.vahid.trader.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -15,8 +15,8 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply("com.android.library")
                 apply("org.jetbrains.kotlin.android")
-                apply("framework.android.ktlint")
-                apply("framework.android.detekt")
+                apply("paper.trader.android.ktlint")
+                apply("paper.trader.android.detekt")
                 apply("com.squareup.sort-dependencies")
             }
 

@@ -1,4 +1,4 @@
-package ir.vahid.framework
+package ir.vahid.trader
 
 import io.kotest.core.spec.style.AnnotationSpec
 import org.junit.jupiter.api.Assertions.assertEquals

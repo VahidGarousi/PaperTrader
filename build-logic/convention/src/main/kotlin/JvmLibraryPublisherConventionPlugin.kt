@@ -7,8 +7,8 @@ import org.gradle.api.publish.maven.MavenPublication
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.create
 import org.gradle.kotlin.dsl.get
-import ir.vahid.framework.configureJvmModulePublishing
-import ir.vahid.framework.moduleInfo
+import ir.vahid.trader.configureJvmModulePublishing
+import ir.vahid.trader.moduleInfo
 class JvmLibraryPublisherConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
@@ -20,7 +20,7 @@ class JvmLibraryPublisherConventionPlugin : Plugin<Project> {
                 afterEvaluate {
                     publications {
                         create<MavenPublication>(
-                            name = "framework",
+                            name = "paperTrader",
                             configuration = {
                                 artifactId = moduleInfo.artifactId
                                 groupId = moduleInfo.groupId

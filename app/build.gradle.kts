@@ -1,15 +1,15 @@
-import ir.vahid.framework.FrameworkBuildType
+import ir.vahid.trader.PaperTraderBuildType
 
 plugins {
-    alias(libs.plugins.framework.android.application)
-    alias(libs.plugins.framework.android.application.compose)
-    alias(libs.plugins.framework.android.application.flavors)
-    alias(libs.plugins.framework.android.application.jacoco)
-    alias(libs.plugins.framework.kotest)
+    alias(libs.plugins.paper.trader.android.application)
+    alias(libs.plugins.paper.trader.android.application.compose)
+    alias(libs.plugins.paper.trader.android.application.flavors)
+    alias(libs.plugins.paper.trader.android.application.jacoco)
+    alias(libs.plugins.paper.trader.kotest)
 }
 
 android {
-    namespace = "ir.vahid.framework"
+    namespace = "ir.vahid.paper.trader"
     compileSdk = 35
 
     defaultConfig {
@@ -25,7 +25,7 @@ android {
         debug {
             isMinifyEnabled = false
             isShrinkResources = false
-            versionNameSuffix = FrameworkBuildType.DEBUG.versionNameSuffix
+            versionNameSuffix = PaperTraderBuildType.DEBUG.versionNameSuffix
         }
         release {
             isMinifyEnabled = true

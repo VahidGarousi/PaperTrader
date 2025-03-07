@@ -1,4 +1,4 @@
-package ir.vahid.framework.core.domain.specification
+package ir.vahid.trader.core.domain.specification
 
 abstract class CompositeSpecification<T> : ISpecification<T> {
     abstract override fun isSatisfiedBy(candidate: T): Boolean

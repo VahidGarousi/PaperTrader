@@ -1,5 +1,5 @@
-import ir.vahid.framework.configureAndroidModulePublishing
-import ir.vahid.framework.moduleInfo
+import ir.vahid.trader.configureAndroidModulePublishing
+import ir.vahid.trader.moduleInfo
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.publish.PublishingExtension
@@ -21,7 +21,7 @@ class AndroidLibraryPublisherConventionPlugin : Plugin<Project> {
                 afterEvaluate {
                     publications {
                         create<MavenPublication>(
-                            name = "framework",
+                            name = "paperTrader",
                             configuration = {
                                 artifactId = moduleInfo.artifactId
                                 groupId = moduleInfo.groupId

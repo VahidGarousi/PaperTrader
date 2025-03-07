@@ -4,7 +4,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "ir.vahid.framework.buildlogic"
+group = "ir.vahid.paper.trader.buildlogic"
 
 
 // Configure the build-logic plugins to target JDK 17
@@ -40,59 +40,59 @@ tasks {
 gradlePlugin {
     plugins {
         register("androidApplicationCompose") {
-            id = libs.plugins.framework.android.application.compose.get().pluginId
+            id = libs.plugins.paper.trader.android.application.compose.get().pluginId
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
         register("androidApplication") {
-            id = libs.plugins.framework.android.application.asProvider().get().pluginId
+            id = libs.plugins.paper.trader.android.application.asProvider().get().pluginId
             implementationClass = "AndroidApplicationConventionPlugin"
         }
         register("androidLibraryCompose") {
-            id = libs.plugins.framework.android.library.compose.get().pluginId
+            id = libs.plugins.paper.trader.android.library.compose.get().pluginId
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
         register("androidLibrary") {
-            id = libs.plugins.framework.android.library.asProvider().get().pluginId
+            id = libs.plugins.paper.trader.android.library.asProvider().get().pluginId
             implementationClass = "AndroidLibraryConventionPlugin"
         }
         register("androidTest") {
-            id = libs.plugins.framework.android.test.get().pluginId
+            id = libs.plugins.paper.trader.android.test.get().pluginId
             implementationClass = "AndroidTestConventionPlugin"
         }
         register("androidFlavors") {
-            id = libs.plugins.framework.android.application.flavors.get().pluginId
+            id = libs.plugins.paper.trader.android.application.flavors.get().pluginId
             implementationClass = "AndroidApplicationFlavorsConventionPlugin"
         }
         register("jvmLibrary") {
-            id = libs.plugins.framework.jvm.library.get().pluginId
+            id = libs.plugins.paper.trader.jvm.library.get().pluginId
             implementationClass = "JvmLibraryConventionPlugin"
         }
-        register("frameworkAndroidPublisher") {
-            id = libs.plugins.framework.android.publisher.get().pluginId
+        register("paperTraderAndroidPublisher") {
+            id = libs.plugins.paper.trader.android.publisher.get().pluginId
             implementationClass = "AndroidLibraryPublisherConventionPlugin"
         }
-        register("frameworkJvmPublisher") {
-            id = libs.plugins.framework.jvm.publisher.get().pluginId
+        register("paperTraderJvmPublisher") {
+            id = libs.plugins.paper.trader.jvm.publisher.get().pluginId
             implementationClass = "JvmLibraryPublisherConventionPlugin"
         }
-        register("frameworkAndroidKtlint") {
-            id = libs.plugins.framework.android.ktlint.get().pluginId
+        register("paperTraderAndroidKtlint") {
+            id = libs.plugins.paper.trader.android.ktlint.get().pluginId
             implementationClass = "KotlinterConventionPlugin"
         }
         register("androidApplicationJacoco") {
-            id = libs.plugins.framework.android.application.jacoco.get().pluginId
+            id = libs.plugins.paper.trader.android.application.jacoco.get().pluginId
             implementationClass = "AndroidApplicationJacocoConventionPlugin"
         }
         register("androidLibraryJacoco") {
-            id = libs.plugins.framework.android.library.jacoco.get().pluginId
+            id = libs.plugins.paper.trader.android.library.jacoco.get().pluginId
             implementationClass = "AndroidLibraryJacocoConventionPlugin"
         }
         register("androidDetekt") {
-            id = libs.plugins.framework.android.detekt.get().pluginId
+            id = libs.plugins.paper.trader.android.detekt.get().pluginId
             implementationClass = "AndroidDetektConventionPlugin"
         }
         register("kotest") {
-            id = libs.plugins.framework.kotest.get().pluginId
+            id = libs.plugins.paper.trader.kotest.get().pluginId
             implementationClass = "KotestConventionPlugin"
         }
     }

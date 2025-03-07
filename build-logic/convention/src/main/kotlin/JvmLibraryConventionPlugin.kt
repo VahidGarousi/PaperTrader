@@ -1,5 +1,5 @@
-import ir.vahid.framework.configureKotlinJvm
-import ir.vahid.framework.libs
+import ir.vahid.trader.configureKotlinJvm
+import ir.vahid.trader.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies

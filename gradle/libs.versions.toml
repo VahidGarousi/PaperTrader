@@ -179,20 +179,20 @@ roborazzi = { id = "io.github.takahirom.roborazzi", version.ref = "roborazzi" }
 
 
 # Plugins defined by this project
-framework-android-application = { id = "framework.android.application" }
-framework-android-application-flavors = { id = "framework.android.application.flavors" }
-framework-android-application-compose = { id = "framework.android.application.compose" }
-framework-android-application-jacoco = { id = "framework.android.application.jacoco" }
-framework-android-test = { id = "framework.android.test" }
-framework-jvm-library = { id = "framework.jvm.library" }
-framework-android-library = { id = "framework.android.library" }
-framework-android-library-compose = { id = "framework.android.library.compose" }
-framework-android-library-jacoco = { id = "framework.android.library.jacoco" }
-framework-jvm-publisher = { id = "framework.jvm.publisher" }
-framework-android-publisher = { id = "framework.android.publisher" }
-framework-android-ktlint = { id = "framework.android.ktlint" }
-framework-android-detekt = { id = "framework.android.detekt" }
-framework-kotest = { id = "framework.android.detekt" }
+paper-trader-android-application = { id = "paper.trader.android.application" }
+paper-trader-android-application-flavors = { id = "paper.trader.android.application.flavors" }
+paper-trader-android-application-compose = { id = "paper.traderandroid.application.compose" }
+paper-trader-android-application-jacoco = { id = "paper.trader.android.application.jacoco" }
+paper-trader-android-test = { id = "paper.trader.android.test" }
+paper-trader-jvm-library = { id = "paper.trader.jvm.library" }
+paper-trader-android-library = { id = "paper.trader.android.library" }
+paper-trader-android-library-compose = { id = "paper.trader.android.library.compose" }
+paper-trader-android-library-jacoco = { id = "paper.trader.android.library.jacoco" }
+paper-trader-jvm-publisher = { id = "paper.trader.jvm.publisher" }
+paper-trader-android-publisher = { id = "paper.trader.android.publisher" }
+paper-trader-android-ktlint = { id = "paper.trader.android.ktlint" }
+paper-trader-android-detekt = { id = "paper.trader.android.detekt" }
+paper-trader-kotest = { id = "paper.trader.android.detekt" }
 
 
 

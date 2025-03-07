@@ -1,4 +1,4 @@
-package ir.vahid.framework
+package ir.vahid.trader
 
 
 import com.android.build.gradle.LibraryExtension
@@ -16,12 +16,12 @@ internal fun Project.configureAndroidModulePublishing() {
             }
         }
     }
-    extensions.create("frameworkPublisher", ModuleInfoExtension::class)
+    extensions.create("publisher", ModuleInfoExtension::class)
 }
 
 
 
 internal fun Project.configureJvmModulePublishing() {
-    extensions.create("frameworkPublisher", ModuleInfoExtension::class)
+    extensions.create("publisher", ModuleInfoExtension::class)
 }
 

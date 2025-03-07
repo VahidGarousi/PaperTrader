@@ -1,5 +1,5 @@
 import com.android.build.api.dsl.ApplicationExtension
-import ir.vahid.framework.configureFlavors
+import ir.vahid.trader.configureFlavors
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

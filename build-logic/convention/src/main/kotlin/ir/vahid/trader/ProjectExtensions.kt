@@ -1,4 +1,4 @@
-package ir.vahid.framework
+package ir.vahid.trader
 
 import io.gitlab.arturbosch.detekt.extensions.DetektExtension
 import org.gradle.api.Project

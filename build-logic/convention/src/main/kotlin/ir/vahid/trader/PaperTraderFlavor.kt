@@ -1,4 +1,4 @@
-package ir.vahid.framework
+package ir.vahid.trader
 
 
 import com.android.build.api.dsl.ApplicationExtension
@@ -13,7 +13,7 @@ enum class FlavorDimension {
 // The content for the app can either come from local static data which is useful for demo
 // purposes, or from a production backend server which supplies up-to-date, real content.
 // These two product flavors reflect this behaviour.
-enum class FrameworkFlavor(
+enum class PaperTraderFlavor(
     val dimension: FlavorDimension,
     val applicationIdSuffix: String? = null,
     val versionName: String,
@@ -41,7 +41,7 @@ enum class FrameworkFlavor(
 
 fun configureFlavors(
     commonExtension: CommonExtension<*, *, *, *, *, *>,
-    flavorConfigurationBlock: ProductFlavor.(flavor: FrameworkFlavor) -> Unit = {},
+    flavorConfigurationBlock: ProductFlavor.(flavor: PaperTraderFlavor) -> Unit = {},
 ) {
     commonExtension.apply {
         FlavorDimension.values().forEach { flavorDimension ->
@@ -49,16 +49,16 @@ fun configureFlavors(
         }
 
         productFlavors {
-            FrameworkFlavor.values().forEach { frameworkFlavor ->
-                create(frameworkFlavor.name.lowercase()) {
-                    dimension = frameworkFlavor.dimension.name
-                    flavorConfigurationBlock(this, frameworkFlavor)
+            PaperTraderFlavor.values().forEach { paperTraderFlavor ->
+                create(paperTraderFlavor.name.lowercase()) {
+                    dimension = paperTraderFlavor.dimension.name
+                    flavorConfigurationBlock(this, paperTraderFlavor)
                     if (this@apply is ApplicationExtension && this is ApplicationProductFlavor) {
-                        if (frameworkFlavor.applicationIdSuffix != null) {
-                            applicationIdSuffix = frameworkFlavor.applicationIdSuffix
+                        if (paperTraderFlavor.applicationIdSuffix != null) {
+                            applicationIdSuffix = paperTraderFlavor.applicationIdSuffix
                         }
-                        versionCode = frameworkFlavor.versionCode
-                        versionName = frameworkFlavor.versionName
+                        versionCode = paperTraderFlavor.versionCode
+                        versionName = paperTraderFlavor.versionName
                     }
                 }
             }

@@ -1,4 +1,4 @@
-package ir.vahid.framework
+package ir.vahid.trader
 
 open class ModuleInfoExtension {
     var groupId: String = ""

@@ -1,4 +1,4 @@
-package ir.vahid.framework
+package ir.vahid.trader
 
 
 import com.android.build.api.artifact.ScopedArtifact

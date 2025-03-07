@@ -1,4 +1,4 @@
-package ir.vahid.framework
+package ir.vahid.trader
 
 import io.gitlab.arturbosch.detekt.Detekt
 import io.gitlab.arturbosch.detekt.extensions.DetektExtension

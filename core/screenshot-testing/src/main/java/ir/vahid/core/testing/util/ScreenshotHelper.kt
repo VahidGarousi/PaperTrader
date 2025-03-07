@@ -30,7 +30,7 @@ import com.google.android.apps.common.testing.accessibility.framework.Accessibil
 import com.google.android.apps.common.testing.accessibility.framework.AccessibilityViewCheckResult
 import com.google.android.apps.common.testing.accessibility.framework.integrations.espresso.AccessibilityViewCheckException
 import com.google.android.apps.common.testing.accessibility.framework.utils.contrast.BitmapImage
-import ir.vahid.core.designsystem.theme.FrameworkTheme
+import ir.vahid.core.designsystem.theme.PaperTraderTheme
 import org.hamcrest.Matcher
 import org.hamcrest.Matchers
 import org.robolectric.RuntimeEnvironment
@@ -160,7 +160,7 @@ fun <A : ComponentActivity> AndroidComposeTestRule<ActivityScenarioRule<A>, A>.c
         CompositionLocalProvider(
             LocalInspectionMode provides true,
         ) {
-            FrameworkTheme(
+            PaperTraderTheme(
                 darkTheme = darkMode,
                 dynamicColor = dynamicTheming,
             ) {

@@ -1,4 +1,4 @@
-package ir.vahid.framework.core.domain.specification
+package ir.vahid.trader.core.domain.specification
 
 class NotSpecification<T> (
     private val target: ISpecification<T>
