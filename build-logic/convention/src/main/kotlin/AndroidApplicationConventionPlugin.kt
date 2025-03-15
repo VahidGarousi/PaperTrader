@@ -1,6 +1,7 @@
 import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.api.variant.ApplicationAndroidComponentsExtension
 import com.android.build.gradle.BaseExtension
+import ir.vahid.trader.applyPlugin
 import ir.vahid.trader.configureBadgingTasks
 import ir.vahid.trader.configureKotlinAndroid
 import org.gradle.api.Plugin
@@ -20,7 +21,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                 apply("paper.trader.android.detekt")
                 apply("com.squareup.sort-dependencies")
             }
-
+            applyPlugin(pluginId = "paper-trader-android-koin-application")
             extensions.configure<ApplicationExtension> {
                 configureKotlinAndroid(this)
                 defaultConfig.targetSdk = TARGET_SDK_VERSION
@@ -33,5 +34,4 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             }
         }
     }
-
 }

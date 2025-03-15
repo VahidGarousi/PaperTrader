@@ -18,3 +18,6 @@ inline fun Project.detektGradle(crossinline configure: DetektExtension.() -> Uni
     extensions.configure<DetektExtension> {
         configure()
     }
+
+
+internal fun Project.applyPlugin(pluginId: String) = libs.findPlugin(pluginId).get().get().pluginId

@@ -1,11 +1,13 @@
 import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import com.android.build.gradle.LibraryExtension
+import ir.vahid.trader.applyPlugin
 import ir.vahid.trader.configureFlavors
 import ir.vahid.trader.configureKotlinAndroid
 import ir.vahid.trader.disableUnnecessaryAndroidTests
 import ir.vahid.trader.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 
@@ -19,7 +21,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
                 apply("paper.trader.android.detekt")
                 apply("com.squareup.sort-dependencies")
             }
-
+            applyPlugin(pluginId = "paper-trader-android-koin-library")
             extensions.configure<LibraryExtension> {
                 configureKotlinAndroid(this)
                 defaultConfig.targetSdk = TARGET_SDK_VERSION
