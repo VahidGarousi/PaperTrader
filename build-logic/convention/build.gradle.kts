@@ -26,6 +26,7 @@ dependencies {
     compileOnly(libs.compose.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
     compileOnly(libs.detekt.gradlePlugin)
+    compileOnly(libs.ksp.gradlePlugin)
     implementation(libs.truth)
 }
 
@@ -94,6 +95,16 @@ gradlePlugin {
         register("kotest") {
             id = libs.plugins.paper.trader.kotest.get().pluginId
             implementationClass = "KotestConventionPlugin"
+        }
+
+        register("androidKoinApplication") {
+            id = libs.plugins.paper.trader.android.koin.application.get().pluginId
+            implementationClass = "AndroidAppKoinConventionPlugin"
+        }
+
+        register("androidKoinLibrary") {
+            id = libs.plugins.paper.trader.android.koin.library.get().pluginId
+            implementationClass = "AndroidLibraryKoinConventionPlugin"
         }
     }
 }
